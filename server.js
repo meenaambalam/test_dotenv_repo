@@ -6,6 +6,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 require('dotenv').config();
+const apiKey = process.env.APIKEY;
 
 // Data
 // ===========================================================
@@ -32,7 +33,6 @@ var characters = [{
 // Routes
 // ===========================================================
 app.get("/", function(req, res) {
-  const apiKey = process.env.APIKEY;
   res.send("Welcome to the Star Wars Page - Here is the test APIKey :"+ apiKey);
 });
 
